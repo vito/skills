@@ -77,3 +77,6 @@ If you encounter unknown changes, DO NOT remove them - ask the user first.
 
 Always commit with `-s` to sign off the commit, which is required for DCO
 checks.
+
+Never add a `Co-authored-by:` line. Only include the sign-off; do not pollute
+commit messages with marketing trailers.
