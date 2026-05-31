@@ -11,7 +11,7 @@ When running or debugging tests in the Dagger repository.
 
 ## Repository layout
 
-The Dagger repo uses a **bare git repo with worktrees**:
+The Dagger repo MAY be a **bare git repo with worktrees**:
 
 ```
 /home/vito/src/dagger/
@@ -24,6 +24,9 @@ The Dagger repo uses a **bare git repo with worktrees**:
 Each worktree is a standalone checkout with its own `dagger.json` at
 the root. **Always `cd` into the correct worktree before running
 commands.** There is no top-level `dagger.json`.
+
+Note: it might not be a worktree; not all of my machines are set up this way.
+Always check.
 
 ## Running checks
 
