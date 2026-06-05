@@ -39,6 +39,12 @@ the package or subsystem name, e.g. `fmt`, `lsp`, `parser`.
 - Even routine fixes should include a short body explaining why the change
   was made
 
+The 80-character wrapping applies to **commit messages only** — plain text in
+a terminal. Do not carry it over to anything rendered as markdown. PR
+descriptions, issue comments, and review replies should let prose flow as
+unbroken lines per paragraph; hard-wrapping them inserts ugly mid-sentence
+breaks in the rendered output.
+
 ## No Amending
 
 Never use `git commit --amend`. Always create a new commit. Separate
