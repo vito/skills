@@ -5,30 +5,31 @@ description: How to write commit messages for this project. Use when committing 
 
 # Committing
 
-This project uses [Conventional Commits](https://www.conventionalcommits.org/).
+This project uses [scoped commits](https://scopedcommits.com/) — the style used
+by Linux, Git, Go, FreeBSD, and NixOS.
 
 ## Format
 
 ```
-type(scope): short summary limited to 50 chars
+scope: short summary limited to 50 chars
 
 Required descriptive body wrapped at 80 characters. Explain what changed and
 why without being verbose.
 ```
 
-## Types
-
-- `feat` — new feature
-- `fix` — bug fix
-- `chore` — maintenance (deps, golden files, etc.)
-- `style` — formatting, no logic change
-- `test` — adding or updating tests
-- `refactor` — restructuring without behavior change
-
 ## Scope
 
-The scope is optional but preferred when the change is localized. Use
-the package or subsystem name, e.g. `fmt`, `lsp`, `parser`.
+The scope leads the subject because it says *where* the change lives, which is
+what a contributor, reviewer, or someone bisecting an incident actually needs.
+Use the package or subsystem name, e.g. `fmt`, `lsp`, `parser`. Match whatever
+convention the surrounding history already uses; nest with `/` when it helps
+(e.g. `net/http: ...`). Omit the scope only when no single one fits.
+
+The summary is a plain description of the change. A clear one already conveys
+whether something is a fix, a feature, or a refactor — e.g.
+`svg: prevent namespaced <style> elements from being stripped` reads plainly as
+a bugfix. Keep the summary free of category labels; spend the space on the
+description.
 
 ## Rules
 
